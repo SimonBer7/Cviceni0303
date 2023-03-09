@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kryptoměnová tabulka</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Kryptoměnová tabulka</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Kryptoměna</th>
+                    <th>Cena (Kč)</th>
+                    <th>Doba poslední aktualizace</th>
+                    <th>Akce</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bitcoin</td>
+                    <td id="bitcoin-price">-</td>
+                    <td id="bitcoin-update-time">-</td>
+                    <td><button class="btn btn-primary update-price-button" data-coin-id="bitcoin">Aktualizovat</button></td>
+                </tr>
+                <tr>
+                    <td>Ethereum</td>
+                    <td id="ethereum-price">-</td>
+                    <td id="ethereum-update-time">-</td>
+                    <td><button class="btn btn-primary update-price-button" data-coin-id="ethereum">Aktualizovat</button></td>
+                </tr>
+                <tr>
+                    <td>Litecoin</td>
+                    <td id="litecoin-price">-</td>
+                    <td id="litecoin-update-time">-</td>
+                    <td><button class="btn btn-primary update-price-button" data-coin-id="litecoin">Aktualizovat</button></td>
+                </tr>
+                <tr>
+                    <td>Bitcoin Cash</td>
+                    <td id="bitcoin-cash-price">-</td>
+                    <td id="bitcoin-cash-update-time">-</td>
+                    <td><button class="btn btn-primary update-price-button" data-coin-id="bitcoin-cash">Aktualizovat</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="error-message" class="alert alert-danger" style="display:none;"></div>
+        <button id="retry-button" class="btn btn-primary" style="visibility: hidden;">Znovu načíst</button>
+    </div>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
